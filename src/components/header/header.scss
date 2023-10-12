@@ -1,0 +1,76 @@
+@import "../../amountStyless.scss";
+
+* {
+  font-size: 1rem;
+  color: $neutral80;
+}
+input::-moz-placeholder {
+  color: $neutral80;
+}
+input::-webkit-input-placeholder {
+  color: $neutral80;
+}
+
+.navigation {
+  padding: 1rem 0;
+  .navigation__wrapper {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 90rem;
+    .navigation__adress {
+      @include center;
+    }
+    .navigation__section {
+      display: flex;
+      justify-content: space-between;
+      width: 75%;
+      a {
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size 0.3s;
+      }
+
+      a:hover {
+        background-size: 100% 1px;
+      }
+
+      a:first-child {
+        color: $error60;
+      }
+    }
+  }
+}
+
+.search {
+  padding: 1.25rem 0;
+  border-top: 1px solid $neutral10;
+  .search__wrapper {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+  }
+}
+
+.search__input {
+  display: flex;
+  border-radius: 0.5rem;
+  border: 2px solid $primary60;
+  padding: 1rem;
+  height: 1rem;
+  width: 50%;
+}
+
+.search__icons {
+  display: flex;
+  gap: 1rem;
+
+  img {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../amountStyless.scss";
+
+.catalog-button {
+  border-radius: 0.5rem;
+  background: $primary10;
+  cursor: pointer;
+  color: $primary60;
+  padding: 1rem 0.5rem;
+  transition: background-color 0.5s;
+}
+
+.catalog-button:hover {
+  background-color: $primary20;
+}
+
+.catalog-button:active {
+  background-color: $primary30;
+}

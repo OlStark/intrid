@@ -1,0 +1,94 @@
+@import "../../amountStyless.scss";
+
+.filters {
+  max-width: 20%;
+  .reset {
+    background-color: transparent;
+    color: $primary60;
+    cursor: pointer;
+    transition: background-color 0.1s;
+  }
+  .reset:active {
+    background-color: $primary10;
+    border-radius: 0.5rem;
+  }
+  .filters__wrapper {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid $neutral10;
+    .filters__header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $neutral10;
+    }
+    .filtres__price {
+      margin-bottom: 2rem;
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input {
+        border: 2px solid $primary10;
+        padding: 1rem 0 1rem 1rem;
+        box-sizing: border-box;
+      }
+      p {
+        width: fit-content;
+      }
+      .filtres__price_inputs {
+        display: flex;
+        .filters__price_label {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+          .filter__price_text {
+            color: $neutral40;
+            padding: 0 0 0.75rem 1rem;
+          }
+        }
+        .from {
+          input {
+            border-radius: 0.5rem 0rem 0rem 0.5rem;
+          }
+        }
+        .to {
+          input {
+            border-radius: 0rem 0.5rem 0.5rem 0rem;
+          }
+        }
+      }
+      .slider {
+        width: 100%;
+        height: 1px;
+        .thumb {
+          width: 1.375rem;
+          height: 1.375rem;
+          border-radius: 50%;
+          top: -11px;
+          background-color: $primary60;
+        }
+        .disabled {
+          background-color: $primary40;
+        }
+        .active {
+          outline: none;
+          background-color: $primary40;
+        }
+      }
+    }
+  }
+  .filters__buttons {
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    button {
+      @extend .reset;
+    }
+    .submit {
+      border: 1px solid $primary60;
+      border-radius: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@import "../../amountStyless.scss";
+
+.filter__select {
+  .filter__select_title {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    z-index: 1;
+    .arrow {
+      transition: all 0.5s;
+    }
+    .arrow__open {
+      transform: rotateX(180deg);
+      transition: all 0.5s;
+    }
+  }
+  .filter__select_body {
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 1s linear;
+    opacity: 0;
+    z-index: 0;
+    transition: translate 0.3s;
+  }
+  .filter__select_body-open {
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 1;
+    transition: translate 0.3s;
+  }
+
+  .filter__select_input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid $neutral10;
+    box-sizing: border-box;
+  }
+  .filter__select_input::-webkit-input-placeholder {
+    color: $neutral40;
+  }
+  .filter__select_input::-moz-placeholder {
+    color: $neutral80;
+  }
+
+  .filter__select_list {
+    list-style: none;
+    padding: 0;
+    max-height: 8rem;
+    overflow-y: scroll;
+    li {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+
+      label {
+        .checkbox {
+          width: 0;
+          height: 0;
+          opacity: 0;
+          position: absolute;
+        }
+
+        .custom-checkbox {
+          position: relative;
+          display: inline-block;
+          width: 1.3rem;
+          height: 1.3rem;
+          border: 2px solid $neutral10;
+          border-radius: 5px;
+          vertical-align: sub;
+          margin-right: 0.45rem;
+        }
+        .custom-checkbox::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 3px;
+          background-color: $primary60;
+          transform: translate(-50%, -50%) scale(0);
+          margin-top: 10px;
+          transition: 0.2s ease-in;
+        }
+        .checkbox:checked + .custom-checkbox::before {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+      p {
+        margin: 0;
+        padding-right: 0.75rem;
+        color: $neutral40;
+      }
+      input {
+        margin-right: 0.75rem;
+        width: auto;
+      }
+    }
+  }
+  .filter__select_list::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  .filter__select_list::-webkit-scrollbar-thumb {
+    background-color: $neutral10; /* цвет бегунка */
+    border-radius: 20px; /* округлось бегунка */
+  }
+}

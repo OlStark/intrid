@@ -1,0 +1,23 @@
+$white: #ffffff;
+$white50: #eceff1;
+$error60: #d82a49;
+$neutral10: #e6e7e8;
+$neutral40: #9d9fa5;
+$neutral5: #f3f3f3;
+$neutral50: #6b6f77;
+$neutral60: #535761;
+$neutral70: #3a3f4a;
+$neutral80: #222734;
+$primary10: #e9ecf4;
+$primary20: #d2dae9;
+$primary30: #a5b5d4;
+$primary40: #788fbe;
+$primary50: #4b6aa9;
+$primary60: #1e4593;
+$primary80: #153067;
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
