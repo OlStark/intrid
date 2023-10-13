@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/intrid/static/css/main.5a6e1f2e.css",
+    "main.js": "/intrid/static/js/main.81659052.js",
+    "static/media/logo 1.svg": "/intrid/static/media/logo 1.19e00549c760fa5bce22cf802df04d5e.svg",
+    "static/media/phone.svg": "/intrid/static/media/phone.10f55748af7c5835af36adaebd22919f.svg",
+    "static/media/cart.svg": "/intrid/static/media/cart.db1f7556ff6be1377fbb81b29af021af.svg",
+    "static/media/user.svg": "/intrid/static/media/user.a836df60056f9517ca2243fc91aa370f.svg",
+    "static/media/map.svg": "/intrid/static/media/map.a29be44e203b6f262fc207e6b3776efc.svg",
+    "static/media/search.svg": "/intrid/static/media/search.57be04d84dfb05dc17bebc49e2a568bd.svg",
+    "static/media/down.svg": "/intrid/static/media/down.d0bcceddd3f05604b79587de980b6c6c.svg",
+    "static/media/hamburger-menu.svg": "/intrid/static/media/hamburger-menu.ef04da61fea68cace20ad4269280c168.svg",
+    "index.html": "/intrid/index.html",
+    "main.5a6e1f2e.css.map": "/intrid/static/css/main.5a6e1f2e.css.map",
+    "main.81659052.js.map": "/intrid/static/js/main.81659052.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a6e1f2e.css",
+    "static/js/main.81659052.js"
+  ]
+}
