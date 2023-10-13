@@ -1,4 +1,5 @@
 import "./App.css";
+import Cards from "./components/cards/Cards";
 import Filters from "./components/filters/Filters";
 import Header from "./components/header/Header";
 
@@ -6,7 +7,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Filters title={"Цена, р"} MIN={0} MAX={5000} />
+      <main>
+        <Filters />
+        <Cards />
+      </main>
     </div>
   );
 }

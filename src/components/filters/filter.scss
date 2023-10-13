@@ -2,6 +2,7 @@
 
 .filters {
   max-width: 20%;
+
   .reset {
     background-color: transparent;
     color: $primary60;
@@ -16,6 +17,9 @@
     padding: 1rem;
     border-radius: 1rem;
     border: 1px solid $neutral10;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     .filters__header {
       display: flex;
       justify-content: space-between;
@@ -35,6 +39,7 @@
       }
       p {
         width: fit-content;
+        margin-bottom: 1rem;
       }
       .filtres__price_inputs {
         display: flex;

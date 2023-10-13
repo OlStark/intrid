@@ -1,0 +1,129 @@
+@import "../../amountStyless.scss";
+@import "../filters/filter.scss";
+
+.cards {
+  width: 66%;
+  right: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1.25rem;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap: 0.75rem;
+    align-self: stretch;
+    border-radius: 0.75rem;
+    border: 1px solid $neutral10;
+    transition: all 0.3s;
+    &__wrapper {
+      position: relative;
+    }
+    &__promotion {
+      width: 100%;
+      position: absolute;
+      padding: 0.5rem;
+    }
+    &__mark {
+      width: fit-content;
+      border-radius: 0.5rem;
+      padding: 0.375rem 0.625rem;
+      line-height: 130%;
+      font-weight: 700;
+    }
+    &__image {
+      border-radius: 1.5rem;
+    }
+    &__title {
+      font-size: 1.125rem;
+    }
+    &__description {
+      color: $neutral50;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__body {
+      padding: 1rem;
+      text-align: left;
+      line-height: 120%;
+    }
+
+    &__price {
+      margin: 0.75rem 0 0.75rem 0;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    &__nav,
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__button {
+      display: flex;
+      width: 2rem;
+      height: 2rem;
+      background-color: white;
+      color: #1e4593;
+      border: 1px solid #e6e7e8;
+      border-radius: 0.3rem;
+      font-size: 1.5rem;
+      justify-content: center;
+      cursor: pointer;
+    }
+    &__quantity {
+      display: flex;
+      align-items: center;
+      width: 2rem;
+      justify-content: center;
+      width: 2rem;
+    }
+    &__cart-button {
+      padding: 0.5rem 0.75rem;
+    }
+    &__buy-button {
+      background-color: transparent;
+      color: #1e4593;
+      cursor: pointer;
+      transition: background-color 0.1s;
+      position: absolute;
+      bottom: 1rem;
+      padding: 0.5rem 0.25rem;
+      display: none;
+    }
+    &__buy-button:active {
+      background-color: $primary20;
+      border-radius: 0.3rem;
+    }
+  }
+
+  .latest {
+    color: #92be66;
+    border: 1px solid #92be66;
+    background: #eaf4df;
+  }
+  .discount {
+    color: #e26279;
+    border: 1px solid #e26279;
+    background: #fceaee;
+    position: absolute;
+    right: 1.5rem;
+    top: 0.5rem;
+  }
+  .best {
+    color: #62aac9;
+    border: 1px solid #62aac9;
+    background: #e1eff5;
+    margin-top: 0.5rem;
+  }
+  .card:hover {
+    position: relative;
+    border: 1px solid $primary40;
+    height: 110%;
+    z-index: 5;
+    .card__buy-button {
+      display: block;
+    }
+  }
+}

@@ -56,27 +56,32 @@ const data = [
   },
 ];
 
-const MIN = 0;
-const MAX = 5000;
-
+const price = [0, 5000];
+const diaIn = [0, 1000];
+const diaEx = [0, 230];
+const height = [0, 3000];
 function Filters() {
-  const [values, setValues] = useState([MIN, MAX]);
+  const [values, setValues] = useState(price);
+  const [outDia, setOutDia] = useState(diaIn);
+  const [intDia, setIntDia] = useState(diaEx);
+  const [width, setWidth] = useState(height);
+
   const handleReset = () => {
-    console.log("reset");
+    setValues(price);
   };
 
   const handleChangeMin = (e) => {
-    if (e.target.value >= values[1]) {
+    if (e >= values[1]) {
       setValues([values[1], values[1]]);
     } else {
-      setValues([e.target.value, values[1]]);
+      setValues([e, values[1]]);
     }
   };
   const handleChangeMax = (e) => {
-    if (e.target.value <= values[0]) {
+    if (e <= values[0]) {
       setValues([values[0], values[0]]);
     } else {
-      setValues([values[0], e.target.value]);
+      setValues([values[0], e]);
     }
   };
   return (
@@ -95,22 +100,39 @@ function Filters() {
           values={values}
           setValues={setValues}
           disabled={false}
-          MIN={MIN}
-          MAX={MAX}
+          MIN={price[0]}
+          MAX={price[1]}
         />
-        {/* <Filter
+        <Filter
+          handleChangeMin={handleChangeMin}
+          handleChangeMax={handleChangeMax}
+          values={outDia}
+          setValues={setValues}
           title={"Наружний диаметр, мм"}
-          MIN={0}
-          MAX={1000}
+          MIN={outDia[0]}
+          MAX={outDia[1]}
           disabled={true}
         />
         <Filter
+          handleChangeMin={handleChangeMin}
+          handleChangeMax={handleChangeMax}
+          values={intDia}
+          setValues={setValues}
           title={"Внутренний диаметр, мм"}
-          MIN={0}
-          MAX={230}
+          MIN={intDia[0]}
+          MAX={intDia[1]}
           disabled={true}
         />
-        <Filter title={"Ширина, мм"} MIN={0} MAX={3000} disabled={true} /> */}
+        <Filter
+          handleChangeMin={handleChangeMin}
+          handleChangeMax={handleChangeMax}
+          values={width}
+          setValues={setValues}
+          title={"Ширина, мм"}
+          MIN={width[0]}
+          MAX={width[1]}
+          disabled={true}
+        />
         <Select data={data} title={"Бренд"} />
         <Select data={data} title={"Материал"} />
       </div>
@@ -118,7 +140,10 @@ function Filters() {
         <button className="filters__buttons_button submit" type="submit">
           Применить
         </button>
-        <button className="filters__buttons_button reset" type="reset">
+        <button
+          onClick={handleReset}
+          className="filters__buttons_button reset"
+          type="reset">
           Сбросить
         </button>
       </div>

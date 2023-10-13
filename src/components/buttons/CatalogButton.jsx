@@ -3,7 +3,7 @@ import "./buttons.scss";
 export const CatalogButton = () => {
   return (
     <>
-      <button className="catalog-button">
+      <button type="button" className="catalog-button">
         <img src={burger} alt="burger" />
         Каталог товаров
       </button>
